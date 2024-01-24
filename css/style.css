@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, ::before, ::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1500px;
+  padding: 0 60px;
+  padding-top: 0px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+header {
+
+}
+
+.sec1 {
+  position: relative;
+  background: #000000c2 url(../img/back.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.sec1 > .wrapper {
+  position: relative;
+  height: 800px;
+
+}
+
+.sec1 > .wrapper > .sofa {
+  position: absolute;
+  height: 450px;
+  width: calc(100% - 120px);
+  left: 60px;
+  right: 60px;
+  max-width: none;
+  background: url(../img/sofa.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  bottom: 65px;
+}
+
+
+
+.sec1 > .wrapper > .pros {
+  position: absolute;
+  height: 272px;
+  width: calc(100% - 120px);
+  left: 60px;
+  right: 60px;
+  max-width: none;
+  box-sizing: border-box;
+  bottom: -200px;
+  background: #000;
+}
+
+
+@media (min-width: 2560px) {
+  
+}
+
+@media (max-width: 1680px) {
+ 
+}
+
+@media (max-width: 1600px) {
+  
+}
+
+@media (max-width: 1536px) {
+  
+}
+
+@media (max-width: 1440px) {
+ 
+}
+
+@media (max-width: 1366px) {
+  
+}
+
+@media (max-width: 1280px) {
+  
+}
+
+@media (max-width: 1180px) {
+  
+}
+
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 534px) {
+  
+}
+
+@media (max-width: 414px) {
+  
+}
+
+@media (max-width: 390px) {
+  
+}
+
+@media (max-width: 375px) {
+  
+}
+
+@media (max-width: 360px) {
+  
+}
