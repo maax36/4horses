@@ -98,15 +98,25 @@
 							<div class="b2">Будущие источники обогащения васюкинцев</div>
 						</div>
 						<div class="group2">
-							<div class="b b1"><div class="num">1</div>Строительство железнодорожной магистрали Москва-Васюки</div>
-							<div class="b b2"><div class="num">2</div>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
-							<div class="b b3"><div class="num">3</div>Поднятие сельского хозяйства в радиусе<br>на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
-							<div class="b b4"><div class="num">4</div>Строительство дворца для турнира</div>
-							<div class="b b5"><div class="num">5</div>Размещение гаражей для гостевого автотранспорта</div>
-							<div class="b b6"><div class="num">6</div>Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
-							<div class="b b7"><div class="num">7</div>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
-							<div class="airplane"></div>
+							<div class="slider-containers">
+							  <div class="sliders">
+							  		<div class="b b1"><div class="num">1</div>Строительство железнодорожной магистрали Москва-Васюки</div>
+										<div class="b b2"><div class="num">2</div>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
+										<div class="b b3"><div class="num">3</div>Поднятие сельского хозяйства в радиусе<br>на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
+										<div class="b b4"><div class="num">4</div>Строительство дворца для турнира</div>
+										<div class="b b5"><div class="num">5</div>Размещение гаражей для гостевого автотранспорта</div>
+										<div class="b b6"><div class="num">6</div>Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
+										<div class="b b7"><div class="num">7</div>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
+							  </div>
+							</div>
 						</div>
+						<div class="airplane"></div>
+						<div class="controls">
+							<div id="mprevBtn" class="slider-btn"></div>
+							<div id="indicator" class="slider-indicator"></div>
+						    <div id="mnextBtn" class="slider-btn"></div>
+						</div>
+						
 					</div>
 				</section>
 
@@ -179,4 +189,54 @@
 			</div>
 		</footer>
 </body>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".sliders .b");
+  const totalSlides = slides.length;
+  const prevBtn = document.getElementById("mprevBtn");
+  const nextBtn = document.getElementById("mnextBtn");
+  const indicator = document.getElementById("indicator");
+
+  // Обработчики событий для кнопок
+  prevBtn.addEventListener("click", showPrevSlide);
+  nextBtn.addEventListener("click", showNextSlide);
+
+  // Показывает предыдущий слайд
+  function showPrevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  // Показывает следующий слайд
+  function showNextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  }
+
+  // Обновляет слайдер после изменения текущего слайда
+  function updateSlider() {
+    const transformValue = `translateX(${-currentSlide * 100}%)`;
+    document.querySelector(".sliders").style.transform = transformValue;
+    updateIndicator();
+  }
+
+  // Обновляет индикатор текущего слайда
+  function updateIndicator() {
+    indicator.innerHTML = "";
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.className = "dot";
+      dot.style.backgroundColor = i === currentSlide ? "#333" : "#eee";
+      indicator.appendChild(dot);
+    }
+  }
+
+  // Инициализация слайдера
+  updateSlider();
+});
+
+
+
+</script>
 </html>

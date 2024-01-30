@@ -326,16 +326,17 @@ position: relative;
 }
 .s3 > .content > .group2 {
   position: relative;
-  display: grid;
-  grid-template-areas:
-    'b1 b2 b3'
-    'b4 b5 b3'
-    'b6 b7 b7';
-  gap: 15px;
-  margin-top: 50px;
 }
-
-.s3 > .content > .group2 > .b {
+.s3 > .content > .group2 > .slider-containers > .sliders {
+    display: grid;
+    grid-template-areas:
+      'b1 b2 b3'
+      'b4 b5 b3'
+      'b6 b7 b7';
+    gap: 15px;
+    margin-top: 50px;
+  }
+.s3 > .content > .group2 > .slider-containers > .sliders > .b {
   position: relative;
   background-color: #E9DED4D1;
   font-family: 'Golos Text', sans-serif;
@@ -345,49 +346,49 @@ position: relative;
   color: #313131;
 }
 
-.s3 > .content > .group2 > .b1 {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b1 {
   grid-area: b1;
   width: 394px;
   height: 112px;
   padding: 20px 40px 0 75px;
 }
 
-.s3 > .content > .group2 > .b2 {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b2 {
   grid-area: b2;
   width: 394px;
   height: 112px;
   padding: 20px 15px 0 75px;
 }
 
-.s3 > .content > .group2 > .b3 {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b3 {
   grid-area: b3;
   width: 394px;
   height: 240px;
   padding: 20px 30px 0 75px;
 }
 
-.s3 > .content > .group2 > .b4 {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b4 {
   grid-area: b4;
   width: 394px;
   height: 112px;
   padding: 20px 40px 0 75px;
 }
 
-.s3 > .content > .group2 > .b5 {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b5 {
   grid-area: b5;
   width: 394px;
   height: 112px;
   padding: 20px 65px 0 75px;
 }
 
-.s3 > .content > .group2 > .b6 {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b6 {
   grid-area: b6;
   width: 394px;
   height: 136px;
   padding: 20px 30px 0 75px;
 }
 
-.s3 > .content > .group2 > .b7 {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b7 {
   grid-area: b7;
   width: 803px;
   height: 136px;
@@ -404,7 +405,7 @@ position: relative;
   background-position: center;
   background-repeat: no-repeat;
 }
-.s3 > .content > .group2 > .b > .num {
+.s3 > .content > .group2 > .slider-containers > .sliders > .b > .num {
   position: absolute;
   left: 20px;
   width: 36px;
@@ -751,20 +752,65 @@ footer > .content > .b1 {
     margin-top: 10px;
   }
   .s3 > .content > .group2 {
-    display: inherit;
-    margin-top: 15px;
-    padding-top: 200px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
   }
-  .s3 > .content > .group2 > .b {
+  .s3 > .content > .group2 > .slider-containers {
+    position: relative;
     width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    padding: 20px 40px 25px 75px;
+    overflow: hidden;
+    padding: 40px 0 0 0;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0;
+    margin-top: 70px;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b {
+    flex: 0 0 100%;
+    height: 388px;
+  }
+  .s3 > .content > .group2.active {
+    transform: translateX(-100%);
   }
   .s3 > .content > .group2 > .airplane {
     width: 100%;
     top: 0;
     left: 0;
+  }
+  .s3 > .content > .controls {
+    margin: 35px auto;
+    width: 207px;
+    height: 36px;
+  }
+  .s3 > .content > .controls > .slider-btn {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background-color: #313131;
+    border-radius: 50%;
+    background-size: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+  }
+  .s3 > .content > .controls > #mprevBtn {
+    background-image: url(../img/prev.png);
+  }
+  .s3 > .content > .controls > #mnextBtn {
+    background-image: url(../img/next.png);
+  }
+  .s3 > .content > .controls > .slider-indicator {
+    float: left;
+    margin: 14px 15px 0 15px;
+  }
+  .s3 > .content > .controls > .slider-indicator > .dot {
+    width: 10px;
+    height: 10px;
+    float: left;
+    border-radius: 50%;
+    margin-left: 5px;
   }
 
 
