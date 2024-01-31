@@ -326,6 +326,7 @@ position: relative;
 }
 .s3 > .content > .group2 {
   position: relative;
+  margin-top: 55px;
 }
 .s3 > .content > .group2 > .slider-containers > .sliders {
     display: grid;
@@ -334,7 +335,6 @@ position: relative;
       'b4 b5 b3'
       'b6 b7 b7';
     gap: 15px;
-    margin-top: 50px;
   }
 .s3 > .content > .group2 > .slider-containers > .sliders > .b {
   position: relative;
@@ -394,7 +394,7 @@ position: relative;
   height: 136px;
   padding: 20px 315px 0 75px;
 }
-.s3 > .content > .group2 > .airplane {
+.s3 > .content > .group2 > .slider-containers > .airplane {
   position: absolute;
   right: -73px;
   bottom: -5px;
@@ -754,34 +754,94 @@ footer > .content > .b1 {
   .s3 > .content > .group2 {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    margin-top: 0;
   }
   .s3 > .content > .group2 > .slider-containers {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 40px 0 0 0;
+    padding: 50px 0 0 0;
   }
   .s3 > .content > .group2 > .slider-containers > .sliders {
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 0;
-    margin-top: 70px;
+    margin-top: 105px;
   }
   .s3 > .content > .group2 > .slider-containers > .sliders > .b {
     flex: 0 0 100%;
-    height: 388px;
+    height: 300px;
+    font-size: 18px;
+    padding-top: 60px;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 {
+  display: flex;
+  flex-direction: column;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b1,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b2
+  {
+    padding: 0 20px 30px 70px;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b1 > .num,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b2 > .num {
+    position: absolute;
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #313131;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b4 > .num,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b5 > .num {
+    position: absolute;
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #313131;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 5px;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b4,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b5
+  {
+    padding: 0 20px 30px 70px;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b3 {
+    padding: 60px 25px 0 75px;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b6 {
+    padding: 60px 25px 0 75px;
+  }
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b7 {
+    padding: 60px 25px 0 75px;
   }
   .s3 > .content > .group2.active {
     transform: translateX(-100%);
   }
-  .s3 > .content > .group2 > .airplane {
+  .s3 > .content > .group2 > .slider-containers > .airplane {
     width: 100%;
     top: 0;
-    left: 0;
+    left: 20px;
   }
   .s3 > .content > .controls {
-    margin: 35px auto;
-    width: 207px;
+    margin: 30px auto;
+    width: 178px;
     height: 36px;
   }
   .s3 > .content > .controls > .slider-btn {
