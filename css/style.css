@@ -81,25 +81,14 @@ tr:last-child td {
   background: #E9DED4D1;
   height: inherit;
 }
-.s1 > .background > .path {
-  position: absolute;
-  width: 100%;
-  height: 464px;
-  background: url(../img/path.png);
-  bottom: 0;
-  margin: 0 auto;
-  background-size: 1600px 464px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .s1 > .background > .city {
   position: absolute;
   width: 100%;
-  height: 443px;
-  background: url(../img/city-nn.png);
+  height: 100%;
+  background-image: url(../img/citynew.png);
   bottom: 0;
   margin: 0 auto;
-  background-size: 1590px 457px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -586,6 +575,8 @@ display: inline-block;
 
 footer {
   background: #E9DED4;
+}
+footer > .content {
   padding: 45px 0 55px 0;
 }
 footer > .content > .b1 {
@@ -594,6 +585,48 @@ footer > .content > .b1 {
   font-size: 16px;
   color: grey;
   line-height: 19.2px;
+}
+
+.marquee-container {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  background-color: #F54932;
+  color: #fff;
+  padding: 10px;
+}
+
+.marquee-content {
+  display: inline-block;
+  position: relative;
+  animation: marquee 30s linear infinite;
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24.2px;
+}
+
+.marquee-content span {
+  position: relative;
+  margin: 0 6px 0 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.marquee-content span::before {
+  content: '\00b7';
+  background-color: #fff;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  display: inline-block;
+  line-height: 10px;
+}
+
+@keyframes marquee {
+  0%   { transform: translate(100%, 0); }
+  100% { transform: translate(-100%, 0); }
 }
 
 
@@ -636,13 +669,16 @@ footer > .content > .b1 {
 @media (max-width: 768px) {
   /*section1*/
   .s1 {
-    height: 845px;
+    height: 812px;
   }
 
   .container {
     padding: 0 25px;
   }
-
+  .s1 > .background > .city {
+    background-image: url(../img/citynew-m.png);
+    bottom: 0;
+  }
   .s1 > .background > .content > .description {
     position: relative;
     width: 100%;
