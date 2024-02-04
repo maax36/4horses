@@ -339,6 +339,7 @@ position: relative;
       'b4 b5 b3'
       'b6 b7 b7';
     gap: 15px;
+    counter-reset: my-counter;
 }
 .s3 > .content > .group2 > .slider-containers > .sliders > .b {
   position: relative;
@@ -357,6 +358,96 @@ position: relative;
   position: absolute;
   left: 0;
   top: 0;
+}
+.s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b1::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #313131;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 5px;
+}
+.s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b4::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b5::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #313131;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 5px;
+}
+.s3 > .content > .group2 > .slider-containers > .sliders > .b1::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b2::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b3::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b4::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b5::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b6::after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b7::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #313131;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 5px;
+}
+.s3 > .content > .group2 > .slider-containers > .sliders > .b1:after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b1:after {
+  content: "1";
+}
+
+.s3 > .content > .group2 > .slider-containers > .sliders > .b2:after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b2:after {
+  content: "2";
+}
+
+.s3 > .content > .group2 > .slider-containers > .sliders > .b3:after {
+  content: "3";
+}
+
+.s3 > .content > .group2 > .slider-containers > .sliders > .b4:after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b4:after {
+  content: "4";
+}
+
+.s3 > .content > .group2 > .slider-containers > .sliders > .b5:after,
+.s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b5:after {
+  content: "5";
+}
+
+.s3 > .content > .group2 > .slider-containers > .sliders > .b6:after {
+  content: "6";
+}
+
+.s3 > .content > .group2 > .slider-containers > .sliders > .b7:after {
+  content: "7";
 }
 .s3 > .content > .group2 > .slider-containers > .sliders > .b > p {
   position: inherit;
@@ -408,21 +499,6 @@ position: relative;
   width: 803px;
   height: 136px;
   padding: 20px 315px 0 75px;
-}
-.s3 > .content > .group2 > .slider-containers > .sliders > .b > .num {
-  position: absolute;
-  left: 20px;
-  width: 36px;
-  height: 36px;
-  background-color: #fff;
-  font-family: 'Golos Text', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #313131;
-  border-radius: 50%;
-  text-align: center;
-  padding-top: 5px;
 }
 
 
@@ -870,38 +946,14 @@ footer > .content > .b1 {
     position: inherit;
     padding: 0 20px 30px 70px;
   }
-  .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b1 > .num,
-  .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2 > .b2 > .num {
-    position: absolute;
-    left: 20px;
-    width: 36px;
-    height: 36px;
-    background-color: #fff;
-    font-family: 'Golos Text', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #313131;
-    border-radius: 50%;
-    text-align: center;
-    padding-top: 5px;
-  }
-
-  .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b4 > .num,
-  .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b5 > .num {
-    position: absolute;
-    left: 20px;
-    width: 36px;
-    height: 36px;
-    background-color: #fff;
-    font-family: 'Golos Text', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #313131;
-    border-radius: 50%;
-    text-align: center;
-    padding-top: 5px;
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b1::after,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b2::after,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b3::after,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b4::after,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b5::after,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b6::after,
+  .s3 > .content > .group2 > .slider-containers > .sliders > .b7::after {
+    top: 65px;
   }
   .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b4,
   .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b5
