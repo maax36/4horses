@@ -28,7 +28,6 @@ th, td {
   border: 2px solid #D0D0D0;
   padding: 15px 10px 15px 0px;
   text-align: left;
-  color: #313131;
   font-family: 'Golos Text', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -36,11 +35,13 @@ th, td {
 
 th {
     width: 310px;
-    color: #D0D0D0;
+    color: grey;
 }
 
 td {
     padding: 15px 0 15px 15px;
+    color: #313131;
+    font-weight: 500;
 }
 
 tr:first-child th {
@@ -236,12 +237,21 @@ tr:last-child td {
   margin-top: 50px;
 }
 .s2 > .content > .group2 > .b1 {
+  position: relative;
   width: 474px;
   height: 527px;
+}
+.s2 > .content > .group2 > .b1::before {
+  content: "";
+  width: 500px;
+  height: 565px;
   background: url(../img/s2_g2_b1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: absolute;
+  left: -30px;
+  top: -5px;
 }
 .s2 > .content > .group2 > .b2 {
   padding-top: 20px;
@@ -267,7 +277,7 @@ tr:last-child td {
   font-size: 20px;
   color: #3057A2;
   line-height: 24px;
-  margin: 35px 0 0 0;
+  margin: 45px 0 0 0;
 }
 .s2 > .content > .group2 > .b2 > .t_info > table > tbody > tr > td > span{
     position: relative;
