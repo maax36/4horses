@@ -81,7 +81,8 @@ tr:last-child td {
   background: #E9DED4D1;
   height: inherit;
 }
-.s1 > .background > .city {
+.s1 > .background::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -92,6 +93,7 @@ tr:last-child td {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .s1 > .background > .content {
   height: inherit;
 }
@@ -161,6 +163,7 @@ tr:last-child td {
   border-radius: 66px;
   font-size: 16px;
   line-height: 19.2px;
+  cursor: pointer;
 }
 .s1 > .background > .content > .description > .buttons > .b1 {
   color: #fff;
@@ -210,7 +213,7 @@ tr:last-child td {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 30px 0 30px 0;
+  margin: 15px 0 15px 0;
   display: none;
 }
 .s2 > .content > .group1 > .b1 span {
@@ -317,6 +320,18 @@ position: relative;
   position: relative;
   margin-top: 55px;
 }
+.s3 > .content > .group2 > .slider-containers::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  right: -65px;
+  background: url(../img/airplane.png) center/cover;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 15px;
+}
 .s3 > .content > .group2 > .slider-containers > .sliders {
     display: grid;
     grid-template-areas:
@@ -324,7 +339,7 @@ position: relative;
       'b4 b5 b3'
       'b6 b7 b7';
     gap: 15px;
-  }
+}
 .s3 > .content > .group2 > .slider-containers > .sliders > .b {
   position: relative;
   background-color: #E9DED4D1;
@@ -383,17 +398,6 @@ position: relative;
   height: 136px;
   padding: 20px 315px 0 75px;
 }
-.s3 > .content > .group2 > .slider-containers > .airplane {
-  position: absolute;
-  right: -73px;
-  bottom: -5px;
-  width: 408px;
-  height: 240px;
-  background: url(../img/airplane.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .s3 > .content > .group2 > .slider-containers > .sliders > .b > .num {
   position: absolute;
   left: 20px;
@@ -414,7 +418,7 @@ position: relative;
 /*section4*/
 .s4 {
   margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 .s4 > .content {
 
@@ -466,7 +470,7 @@ display: inline-block;
   background-image: url(../img/next.png);
 }
 .s4 > .content > .group1 > .b2 > .controls > #counter {
-  color: #333;
+  color: grey;
   padding: 0 14px 0 14px;
   display: inline-block;
   font-family: 'Golos Text', sans-serif;
@@ -504,7 +508,7 @@ display: inline-block;
   background-image: url(../img/next.png);
 }
 .s4 > .content > .group2 > .slider-container > .m_controls > #m_counter {
-  color: #333;
+  color: grey;
   padding: 0 14px 0 14px;
   display: inline-block;
   font-family: 'Golos Text', sans-serif;
@@ -571,13 +575,14 @@ display: inline-block;
 .s4 > .content > .group2 > .slider-container > .slider > .slide > .details:hover {
   color: #fff;
   background-color: #3057A2;
+  cursor: pointer;
 }
 
 footer {
   background: #E9DED4;
 }
 footer > .content {
-  padding: 45px 0 55px 0;
+  padding: 45px 30px 55px 20px;
 }
 footer > .content > .b1 {
   font-family: 'Golos Text', sans-serif;
@@ -673,22 +678,36 @@ footer > .content > .b1 {
   }
 
   .container {
-    padding: 0 25px;
+    padding: 0 20px;
   }
-  .s1 > .background > .city {
+  .s1 > .background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-image: url(../img/citynew-m.png);
     bottom: 0;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center 20px;
+    background-repeat: no-repeat;
   }
   .s1 > .background > .content > .description {
     position: relative;
     width: 100%;
     height: 393px;
-    top: 100px;
+    top: 105px;
+  }
+  .s1 > .background > .content > .description > p {
+    margin-top: 30px;
   }
 
   .s1 > .background > .content > .description > h1 {
     font-size: 36px;
     line-height: 39px;
+  }
+  .s1 > .background > .content > .description > .buttons {
+    margin-top: 40px;
   }
   .s1 > .background > .content > .description > .buttons > button {
     width: 100%;
@@ -762,6 +781,9 @@ footer > .content > .b1 {
       padding: 5px 0 15px 0;
       line-height: 1;
   }
+  .s2 > .content > .group2 > .b2 > .t_info > table > tbody > tr > td > span {
+    margin-right: 10px;
+  }
   .s2 > .content > .group2 > .b2 > .text {
     font-size: 18px;
     line-height: 21.6px;
@@ -798,6 +820,18 @@ footer > .content > .b1 {
     overflow: hidden;
     padding: 50px 0 0 0;
   }
+  .s3 > .content > .group2 > .slider-containers::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 380px;
+    height: 205px;
+    background: url(../img/airplane.png) center/cover;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   .s3 > .content > .group2 > .slider-containers > .sliders {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -808,6 +842,7 @@ footer > .content > .b1 {
     flex: 0 0 100%;
     height: 300px;
     font-size: 18px;
+    line-height: 21.6px;
     padding-top: 60px;
   }
   .s3 > .content > .group2 > .slider-containers > .sliders > .b1-b2,
@@ -856,7 +891,7 @@ footer > .content > .b1 {
   .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b4,
   .s3 > .content > .group2 > .slider-containers > .sliders > .b4-b5 > .b5
   {
-    padding: 0 20px 30px 70px;
+    padding: 0 40px 30px 70px;
   }
   .s3 > .content > .group2 > .slider-containers > .sliders > .b3 {
     padding: 60px 25px 0 75px;
@@ -869,11 +904,6 @@ footer > .content > .b1 {
   }
   .s3 > .content > .group2.active {
     transform: translateX(-100%);
-  }
-  .s3 > .content > .group2 > .slider-containers > .airplane {
-    width: 100%;
-    top: 0;
-    left: 20px;
   }
   .s3 > .content > .controls {
     margin: 30px auto;
