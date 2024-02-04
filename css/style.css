@@ -352,7 +352,7 @@ position: relative;
 }
 .s3 > .content > .group2 > .slider-containers > .sliders > .b::before {
   content: "";
-  background-color: #E9DED4B8;
+  background-color: #F2D9C2B8;
   width: 100%;
   height: 100%;
   position: absolute;
