@@ -243,15 +243,15 @@ tr:last-child td {
 }
 .s2 > .content > .group2 > .b1::before {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 565px;
   background: url(../img/s2_g2_b1.png);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -30px;
+  top: -5px;
 }
 .s2 > .content > .group2 > .b2 {
   padding-top: 20px;
@@ -839,6 +839,13 @@ footer > .content > .b1 {
   .s2 > .content > .group2 > .b1 {
     width: 100%;
     height: 402px;
+    background-size: contain;
+  }
+  .s2 > .content > .group2 > .b1::before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     background-size: contain;
   }
   .s2 > .content > .group2 > .b2 > .name {
